@@ -1,0 +1,84 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>눈 건강 자가 진단</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    .question {
+      margin: 15px 0;
+    }
+    label {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      accent-color: #4CAF50;
+    }
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      background-color: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <h1>내 눈, 지금 괜찮은 걸까?</h1>
+  <p>아래 문항을 체크해보세요!</p>
+
+  <form id="surveyForm">
+    <div class="question"><label><input type="checkbox" name="q"> 눈이 자주 가렵고 무의식중에 비빈다</label></div>
+    <div class="question"><label><input type="checkbox" name="q"> 실외 활동 후 눈이 더 간지럽다</label></div>
+    <div class="question"><label><input type="checkbox" name="q"> 평소보다 눈물이 많아졌다</label></div>
+    <div class="question"><label><input type="checkbox" name="q"> 눈에 이물감이 자주 든다</label></div>
+    <div class="question"><label><input type="checkbox" name="q"> 눈이 자주 충혈된다</label></div>
+    <div class="question"><label><input type="checkbox" name="q"> 눈곱이 많고 잘 떨어지지 않는다</label></div>
+    <div class="question"><label><input type="checkbox" name="q"> 콘택트렌즈 착용 시 더 불편하다</label></div>
+    <div class="question"><label><input type="checkbox" name="q"> 야외 활동 후 눈 상태가 더 안 좋아진다</label></div>
+    <div class="question"><label><input type="checkbox" name="q"> 눈 주변이 붓거나 따가운 느낌이 든다</label></div>
+    <div class="question"><label><input type="checkbox" name="q"> 최근 미세먼지 수치 높은 날 외출이 잦았다</label></div>
+
+    <button type="button" class="btn" onclick="showResult()">✅ 결과 확인하기</button>
+  </form>
+
+  <script>
+    function showResult() {
+      const checkedCount = document.querySelectorAll('input[name="q"]:checked').length;
+      if (checkedCount <= 2) {
+        window.location.href = 'result-low.html';
+      } else if (checkedCount <= 5) {
+        window.location.href = 'result-mid.html';
+      } else if (checkedCount <= 7) {
+        window.location.href = 'result-high.html';
+      } else {
+        window.location.href = 'result-veryhigh.html';
+      }
+    }
+  </script>
+</body>
+</html>
