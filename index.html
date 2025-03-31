@@ -13,13 +13,20 @@
       margin: 0 auto;
       text-align: left;
     }
+    h1, p, label, button {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
     h1 {
       font-size: 24px;
       margin-bottom: 10px;
+      animation-delay: 0.2s;
     }
     p {
       margin-bottom: 20px;
       font-size: 16px;
+      animation-delay: 0.4s;
     }
     label {
       display: block;
@@ -41,6 +48,7 @@
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       transition: all 0.2s ease;
+      animation-delay: 1.4s;
     }
     button:hover {
       background-color: #388e3c;
@@ -48,6 +56,25 @@
     button:active {
       box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
     }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 개별 라벨 애니메이션 지연 설정 */
+    label:nth-child(1) { animation-delay: 0.6s; }
+    label:nth-child(2) { animation-delay: 0.7s; }
+    label:nth-child(3) { animation-delay: 0.8s; }
+    label:nth-child(4) { animation-delay: 0.9s; }
+    label:nth-child(5) { animation-delay: 1.0s; }
+    label:nth-child(6) { animation-delay: 1.1s; }
+    label:nth-child(7) { animation-delay: 1.2s; }
+    label:nth-child(8) { animation-delay: 1.3s; }
+    label:nth-child(9) { animation-delay: 1.4s; }
+    label:nth-child(10) { animation-delay: 1.5s; }
   </style>
 </head>
 <body>
