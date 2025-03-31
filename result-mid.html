@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>자가진단 결과 - 주의 필요</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>눈 건강 자가진단 결과 - 주의 필요</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
   <style>
     body {
+      background-color: #fff8e1;
       font-family: 'Noto Sans KR', sans-serif;
       padding: 30px 20px;
       max-width: 640px;
       margin: 0 auto;
       text-align: left;
     }
-    .box {
-      background-color: #fff9db;
-      padding: 20px;
-      border-radius: 12px;
+    .result-box {
+      border-left: 6px solid #f9a825;
+      padding-left: 16px;
+      margin-bottom: 30px;
     }
-    .icon {
-      font-size: 24px;
+    .result-box h2 {
       color: #f9a825;
+      font-size: 22px;
       margin-bottom: 10px;
     }
-    .title {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .text {
+    .result-box p {
       font-size: 16px;
       line-height: 1.6;
     }
@@ -46,7 +42,7 @@
       transition: all 0.2s ease;
     }
     button:hover {
-      background-color: #f57f17;
+      background-color: #c17900;
     }
     button:active {
       box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
@@ -54,17 +50,14 @@
   </style>
 </head>
 <body>
-  <div class="box">
-    <div class="icon">⚠️</div>
-    <div class="title">주의 필요!</div>
-    <div class="text">
-      <p>눈에 초기 증상이 있을 수 있어요.</p>
-      <p>생활습관을 점검하고, 상태가 지속되면 검진을 권장합니다.</p>
-    </div>
+  <div class="result-box">
+    <h2>⚠️ 주의가 필요합니다</h2>
+    <p>
+      눈에 초기 증상이 나타나고 있을 수 있습니다.<br/>
+      평소 식습관, 눈 위생, 환경 자극 요소들을 점검해 주세요.
+    </p>
   </div>
 
-  <button onclick="window.location.href='index.html'">
-    🔁 다시 테스트하기
-  </button>
+  <button onclick="window.location.href='index.html'">🔁 다시 테스트하기</button>
 </body>
 </html>
