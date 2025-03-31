@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>자가진단 결과 - 안정 상태</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>눈 건강 자가진단 결과 - 안정 상태</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
   <style>
     body {
+      background-color: #f1f8e9;
       font-family: 'Noto Sans KR', sans-serif;
       padding: 30px 20px;
       max-width: 640px;
       margin: 0 auto;
       text-align: left;
     }
-    .box {
-      border: 2px solid #4CAF50;
-      background-color: #f2f2f2;
-      padding: 20px;
-      border-radius: 12px;
+    .result-box {
+      border-left: 6px solid #4CAF50;
+      padding-left: 16px;
+      margin-bottom: 30px;
     }
-    .icon {
-      font-size: 24px;
+    .result-box h2 {
       color: #4CAF50;
+      font-size: 22px;
       margin-bottom: 10px;
     }
-    .text {
+    .result-box p {
       font-size: 16px;
       line-height: 1.6;
     }
@@ -50,16 +50,14 @@
   </style>
 </head>
 <body>
-  <div class="box">
-    <div class="icon">✅</div>
-    <div class="text">
-      <p>아직은 안정 상태입니다.</p>
-      <p>하지만 정기적으로 눈 상태를 점검해보는 습관을 가져보세요.</p>
-    </div>
+  <div class="result-box">
+    <h2>✅ 안정 상태입니다</h2>
+    <p>
+      현재 눈 건강은 양호한 편입니다.<br/>
+      지금처럼 꾸준히 건강한 생활습관을 유지해 주세요.
+    </p>
   </div>
-  
-  <button onclick="window.location.href='index.html'">
-    🔁 다시 테스트하기
-  </button>
+
+  <button onclick="window.location.href='index.html'">🔁 다시 테스트하기</button>
 </body>
 </html>
